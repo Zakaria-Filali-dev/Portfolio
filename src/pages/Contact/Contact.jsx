@@ -47,7 +47,7 @@ export default function Contact() {
 
     setStatus("Sending…");
     try {
-      const res = await fetch("https://api.web3forms.com/submit/messages", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -57,7 +57,7 @@ export default function Contact() {
           subject: formData.subject || "New contact form submission",
           message: formData.message,
         }),
-      });
+      },
 
       let result = null;
       try {

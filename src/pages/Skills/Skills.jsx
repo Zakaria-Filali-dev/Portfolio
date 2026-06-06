@@ -120,8 +120,12 @@ const SkillsSection = () => {
           icon: <BsGrid1X2 className="w-4 h-4 text-[#FF6C37]" />,
         },
         {
-          name: "GraphQL",
-          icon: <SiGraphql className="w-4 h-4 text-[#E10098]" />,
+          name: "Supabase",
+          icon: <BsGrid1X2 className="w-4 h-4 text-[#3FCF8E]" />,
+        },
+        {
+          name: "PostgreSQL",
+          icon: <SiPostgresql className="w-4 h-4 text-[#336791]" />,
         },
       ],
     },

@@ -15,24 +15,14 @@ const EducationSection = () => {
 
   const educationData = [
     {
-      degree: "Secondary School Certificate (SSC)",
-      school: "Natore Textile Institute",
-      mascot: "📘",
-      year: "2019-2021",
-      achievements: ["GPA: 4.89", "Subject: Science"],
-      skills: ["Mathematics", "Physics", "Chemistry", "Biology"],
+      degree: "Bachelor of Science in Computer Science",
+      school: "University of Djilali Bounaama Khemis Meliana",
+      mascot: "🎓",
+      year: "2022 - 2026",
+      achievements: ["Computer Science Major", "Expected Graduation: 2026"],
+      skills: ["Algorithms", "Data Structures", "Databases", "Software Engineering"],
       description:
-        "Focused on core science subjects with emphasis on practical laboratory work and scientific research methodologies.",
-    },
-    {
-      degree: "Higher Secondary Certificate (HSC)",
-      school: "Dottopara Model Degree College",
-      mascot: "📗",
-      year: "2021-2023",
-      achievements: ["GPA: 4.25", "Subject: Arts"],
-      skills: ["Literature", "Social Studies", "Economics", "History"],
-      description:
-        "Developed strong analytical and critical thinking skills through comprehensive study of humanities and social sciences.",
+        "Building core CS foundations while applying coursework to real full-stack projects.",
     },
   ];
 

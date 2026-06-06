@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./assets/css/index.css";
 import Experience from "./pages/Experience/Experience";
 import Contact from "./pages/Contact/Contact";
@@ -11,7 +11,7 @@ import Education from "./pages/Education/Education";
 import { Route, Routes } from "react-router-dom";
 
 export default function App() {
-  const [isOnePage, setIsOnePage] = useState(false); // Toggle state
+  const [isOnePage] = useState(false); // Toggle state
 
   return (
     <>
@@ -28,7 +28,7 @@ export default function App() {
         </>
       ) : (
         // Router Mode: Use routes for navigation
-        <Routes>`
+        <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/skills" element={<Skills />} />
           <Route path="/experience" element={<Experience />} />

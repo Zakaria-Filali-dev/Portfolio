@@ -42,31 +42,31 @@ const GridBackground = () => {
 
 export default function Hero() {
   const words = [
-    "Full-Stack Developer & UI/UX Enthusiast",
-    "JavaScript Developer & Creator of Olova.js",
-    "Learning MARN Stack",
-    "Linux & GitHub for DevOps Enthusiast",
+    "Full-Stack Developer",
+    "React & Firebase Specialist",
+    "Freelance Web Developer",
+    "Open to Remote Opportunities",
   ];
 
   const [code] = useState(`
 const profile = {
-    name: 'Nazmul Hossain',
-    title: 'Full-Stack Developer | Cloud Enthusiast | Problem Solver',
+    name: 'filali zakaria',
+    title: 'Full-Stack Developer | React & Firebase | Freelance',
     skills: [
-        'React', 'NextJS', 'Redux', 'Express',
-        'MySQL', 'MongoDB', 'Docker', 'AWS', 'TypeScript',
-        'GraphQL', 'Git', 'Linux', 'Discord Development'
+        'React', 'Firebase', 'Next.js', 'TypeScript',
+        'Node.js', 'Express', 'MongoDB', 'Tailwind CSS',
+        'Git', 'Docker', 'Vercel', 'REST APIs'
     ],
     hardWorker: true,
     quickLearner: true,
     problemSolver: true,
-    yearsOfExperience: 4, 
+    yearsOfExperience: 2,
     hireable: function() {
         return (
             this.hardWorker &&
             this.problemSolver &&
             this.skills.length >= 5 &&
-            this.yearsOfExperience >= 3
+            this.yearsOfExperience >= 1
         );
     }
 };
@@ -117,7 +117,7 @@ const profile = {
       if (isTargetResolution) {
         document.documentElement.style.setProperty(
           "--hero-padding-top",
-          "12rem"
+          "12rem",
         );
       } else {
         document.documentElement.style.setProperty("--hero-padding-top", "0");
@@ -190,7 +190,7 @@ const profile = {
                     I&apos;m
                     <span className="typing-effect gradient-text">
                       {" "}
-                      Nazmul Hossain
+                      filali zakaria
                     </span>
                   </span>
                 </h1>
@@ -211,8 +211,9 @@ const profile = {
               {/* Description */}
               <div className="relative mb-8 sm:mb-12 max-w-xl">
                 <p className="text-base sm:text-xl text-gray-300/90 leading-relaxed">
-                  JavaScript lover 🚀 | OlovaJS creator 🔧 | Crafting frameworks
-                  and coding the future 💻✨
+                  I`m Zach, a self-taught web developer and Computer Science
+                  student based in Algeria, specializing in building full-stack
+                  web applications with React and Firebase.
                 </p>
               </div>
 
@@ -220,7 +221,7 @@ const profile = {
               <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate__animated animate__fadeInUp animate__delay-2s">
                 {/* View Projects Button */}
                 <a
-                  href="https://github.com/seraprogrammer"
+                  href="https://github.com/Zakaria-Filali-dev"
                   className="group relative inline-flex items-center justify-center gap-3 bg-gradient-to-r from-blue-500 to-teal-400 p-0.5 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-teal-400">
@@ -233,13 +234,15 @@ const profile = {
 
                 {/* Contact Button */}
                 <a
-                  href="#"
+                  href="https://github.com/Zakaria-Filali-dev"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="group relative inline-flex items-center justify-center gap-3 p-0.5 rounded-xl bg-gradient-to-r from-gray-800 to-gray-700 transition-all duration-300 hover:scale-105 hover:shadow-[0_0_2rem_-0.5rem_#60A5FA]"
                 >
                   <span className="block w-full px-6 sm:px-8 py-3 sm:py-4 rounded-[11px] bg-gray-900 border border-gray-700/50 transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-gray-800 group-hover:to-gray-700">
                     <span className="relative flex items-center justify-center gap-2 text-gray-300 font-medium group-hover:text-white">
-                      <span>Get Resume</span>
-                      <i className="fas fa-envelope transform transition-all duration-300 group-hover:rotate-12"></i>
+                      <span>GitHub Profile</span>
+                      <i className="fas fa-arrow-up-right-from-square transform transition-all duration-300 group-hover:rotate-12"></i>
                     </span>
                   </span>
                 </a>

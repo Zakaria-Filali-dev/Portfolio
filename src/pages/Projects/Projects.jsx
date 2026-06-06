@@ -5,44 +5,34 @@ import PropTypes from "prop-types";
 
 const projects = [
   {
-    title: "Olova! A Lightweight JavaScript Library",
+    title: "CareOS - Clinic Management System",
     description:
-      "A lightweight JavaScript library for creating beautiful, responsive UI components.",
-    src: "rock.jpg",
-    link: "https://i.postimg.cc/DwgWTfP0/Annotation-2025-03-19-113338.png",
-    color: "#5196fd",
-    githubLink: "https://github.com/olovajs/olova",
-    liveLink: "https://olova.js.org/",
+      "Full clinic management system with role-based access control, trilingual support, and production-ready architecture built with React and Firebase.",
+    src: "https://i.postimg.cc/PrmYc4qG/Capture-d-ecran-2026-04-30-182601.png",
+    link: "https://i.postimg.cc/PrmYc4qG/Capture-d-ecran-2026-04-30-182601.png",
+    color: "#0ea5e9",
+    githubLink: "https://github.com/Zakaria-Filali-dev/CareOS",
+    liveLink: "https://dr-farsi-rehabilitation-clinic.vercel.app/",
   },
   {
-    title: "A sleek portfolio built with React and Tailwind CSS ",
+    title: "DZ Marketplace",
     description:
-      "A sleek portfolio built with React and Tailwind CSS to showcase your skills, projects, and experience in a modern design.",
-    src: "tree.jpg",
-    link: "https://i.postimg.cc/J75CKyrs/Annotation-2025-04-01-203959.png",
-    color: "#8f89ff",
-    githubLink: "https://github.com/seraprogrammer/portfolio",
-    liveLink: "https://codervai.vercel.app",
+      "Full-stack marketplace platform with product listings, responsive UI, and clean interface built with React and Tailwind CSS.",
+    src: "https://i.postimg.cc/MTPdnYQC/dz-marketplace.png",
+    link: "https://i.postimg.cc/MTPdnYQC/dz-marketplace.png",
+    color: "#f59e0b",
+    githubLink: "https://github.com/Zakaria-Filali-dev/dz-marketplace",
+    liveLink: "https://dz-marketplace.vercel.app/",
   },
   {
-    title: "🚀 CodeWhisperer",
+    title: "Banat Hawaa School",
     description:
-      "🚀 CodeWhisperer A powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "water.jpg",
-    link: "https://i.postimg.cc/J4jPVFY0/Annotation-2025-04-01-204723.png",
-    color: "#fff",
-    githubLink: "https://github.com/seraprogrammer/codewhisperer",
-    liveLink: "https://codewhisperer.vercel.app/",
-  },
-  {
-    title: "CodeKori 🔥",
-    description:
-      "CodeKori is a powerful online code editor built with React and Tailwind CSS. Featuring real-time code execution, syntax highlighting, multi-language support, and a sleek UI. Start coding instantly! 💻✨",
-    src: "house.jpg",
-    link: "https://i.postimg.cc/cHQr4fpR/Annotation-2025-04-01-205350.png",
-    color: "#ed649e",
-    githubLink: "https://github.com/seraprogrammer/CodeKori",
-    liveLink: "https://codekori.js.org",
+      "School management platform with intuitive UI and modern web technologies, deployed on Vercel.",
+    src: "https://i.postimg.cc/TwDJPXTq/banat-hawaa-school.png",
+    link: "https://i.postimg.cc/TwDJPXTq/banat-hawaa-school.png",
+    color: "#ec4899",
+    githubLink: "https://github.com/Zakaria-Filali-dev/banat-hawaa-school",
+    liveLink: "https://banat-hawaa-school.vercel.app/",
   },
 ];
 

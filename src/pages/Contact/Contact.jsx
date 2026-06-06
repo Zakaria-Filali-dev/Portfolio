@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Send, MapPin, Mail, Linkedin, Github, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 
+const WEB3FORMS_KEY = "d04447bf-b0a2-4722-9f0c-ff95327a8c4b";
+
 export default function Contact() {
   const socials = [
     {
@@ -39,13 +41,33 @@ export default function Contact() {
     /^\S+@\S+\.\S+$/.test(formData.email) &&
     formData.message.trim();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setStatus("Opening your email app…");
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`;
-    const mailto = `mailto:zakaria.filali.dev@gmail.com?subject=${encodeURIComponent(formData.subject || "New Contact Form Submission")}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailto;
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    if (!isValid) return;
+
+    setStatus("Sending…");
+    try {
+      const res = await fetch("https://api.web3forms.com/submit/messages", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject || "New contact form submission",
+          message: formData.message,
+        }),
+      });
+      const json = await res.json();
+      if (json.success) {
+        setStatus("Message sent successfully.");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("Failed to send. Please try again.");
+      }
+    } catch {
+      setStatus("Error sending message. Please try again.");
+    }
   };
 
   return (
@@ -127,6 +149,7 @@ export default function Contact() {
                     }
                     className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-gray-500 outline-none transition focus:border-blue-400/70"
                     placeholder="Your name"
+                    required
                   />
                 </div>
                 <div>
@@ -141,6 +164,7 @@ export default function Contact() {
                     }
                     className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-gray-500 outline-none transition focus:border-blue-400/70"
                     placeholder="you@example.com"
+                    required
                   />
                 </div>
                 <div>
@@ -169,6 +193,7 @@ export default function Contact() {
                     }
                     className="w-full rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-white placeholder-gray-500 outline-none transition focus:border-blue-400/70"
                     placeholder="Tell me about your project…"
+                    required
                   />
                 </div>
               </div>

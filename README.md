@@ -24,7 +24,9 @@ Welcome to my **portfolio website**! This site showcases my skills, experience, 
 ## Live Preview
 
 Check out the live preview of the portfolio website here:  
-[**Live Demo**](https://codervai.vercel.app/)
+
+[**Live Demo**](https://www.zakaria-filali.dev/)
+
 ---
 
 ### 🎯 Project Structure
@@ -158,7 +160,7 @@ You will need to download **Git** and **Node** to run this project.
 2. After forking, open your terminal and run the following commands to clone the repo:
 
   ```bash
-  git clone https://github.com/seraprogrammer/portfolio.git
+  git clone https://github.com/Zakaria-Filali-dev/Portfolio.git
   ```
 
 Navigate to the Project Directory 📂

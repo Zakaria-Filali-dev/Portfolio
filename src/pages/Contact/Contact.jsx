@@ -21,11 +21,6 @@ export default function Contact() {
       href: "https://x.com/ZakariaFil50879",
       icon: <Twitter className="h-5 w-5" />,
     },
-    {
-      label: "Email",
-      href: "mailto:zakaria.filali.dev@gmail.com",
-      icon: <Mail className="h-5 w-5" />,
-    },
   ];
 
   const [status, setStatus] = useState("");
@@ -76,7 +71,7 @@ export default function Contact() {
         setStatus(
           detail
             ? `Failed: ${detail}`
-            : `Failed (HTTP ${res.status}). Please try again.`
+            : `Failed (HTTP ${res.status}). Please try again.`,
         );
       }
     } catch {

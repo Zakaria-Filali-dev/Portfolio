@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Send, MapPin, Mail, Linkedin, Github, Twitter } from "lucide-react";
 import { motion } from "framer-motion";
 

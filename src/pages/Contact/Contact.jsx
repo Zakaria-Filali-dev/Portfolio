@@ -46,6 +46,7 @@ export default function Contact() {
     if (!isValid) return;
 
     setStatus("Sending…");
+    let result = null;
     try {
       const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
@@ -57,9 +58,8 @@ export default function Contact() {
           subject: formData.subject || "New contact form submission",
           message: formData.message,
         }),
-      },
+      });
 
-      let result = null;
       try {
         result = await res.json();
       } catch {

@@ -58,12 +58,26 @@ export default function Contact() {
           message: formData.message,
         }),
       });
-      const json = await res.json();
-      if (json.success) {
+
+      let result = null;
+      try {
+        result = await res.json();
+      } catch {
+        result = null;
+      }
+
+      if (res.ok && result && result.success) {
         setStatus("Message sent successfully.");
         setFormData({ name: "", email: "", subject: "", message: "" });
       } else {
-        setStatus("Failed to send. Please try again.");
+        const detail =
+          (result && result.message) ||
+          (typeof result === "string" ? result : null);
+        setStatus(
+          detail
+            ? `Failed: ${detail}`
+            : `Failed (HTTP ${res.status}). Please try again.`
+        );
       }
     } catch {
       setStatus("Error sending message. Please try again.");
